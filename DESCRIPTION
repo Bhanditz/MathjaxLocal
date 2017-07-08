@@ -8,3 +8,4 @@ Description: R package with local mathjax version for shiny apps
 License: GPL >= 2.0
 Encoding: UTF-8
 LazyData: true
+Depends: shiny
