@@ -8,14 +8,15 @@ examples.mathjaxlocal = function() {
 }
 mathjaxLocalHeader = function() {
 
-  dir = system.file("www/MathJax-2.7.1",package="MathjaxLocal")
+  #dir = system.file("/www/MathJax-2.7.1",package="MathjaxLocal")
   #shiny::addResourcePath("RMathjaxLocal",dir)
   #path <- "RMathjaxLocal/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
   #tags$head(singleton(tags$script(src = path, type = "text/javascript")))
 
 
-  htmlDependency("RMathjaxLocal",version="2.7.1", src=c(file=dir), head ='<script src="RMathjaxLocal-2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>')
-
+  dep =htmlDependency("RMathjaxLocal",version="2.7.1", src="/www/MathJax-2.7.1", head ='<script src="RMathjaxLocal-2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>',package="MathjaxLocal")
+  #res=resolveDependencies(dependencies=list(dep), TRUE)
+  dep
 }
 
 
