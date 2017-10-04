@@ -4,20 +4,20 @@
 /*************************************************************
  *
  *  MathJax/jax/output/HTML-CSS/config.js
- *
+ *  
  *  Initializes the HTML-CCS OutputJax  (the main definition is in
  *  MathJax/jax/input/HTML-CSS/jax.js, which is loaded when needed).
  *
  *  ---------------------------------------------------------------------
- *
+ *  
  *  Copyright (c) 2009-2017 The MathJax Consortium
- *
+ * 
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
  *  You may obtain a copy of the License at
- *
+ * 
  *      http://www.apache.org/licenses/LICENSE-2.0
- *
+ * 
  *  Unless required by applicable law or agreed to in writing, software
  *  distributed under the License is distributed on an "AS IS" BASIS,
  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -27,13 +27,13 @@
 
 MathJax.OutputJax["HTML-CSS"] = MathJax.OutputJax({
   id: "HTML-CSS",
-  version: "2.7.1",
+  version: "2.7.2",
   directory: MathJax.OutputJax.directory + "/HTML-CSS",
   extensionDir: MathJax.OutputJax.extensionDir + "/HTML-CSS",
   autoloadDir: MathJax.OutputJax.directory + "/HTML-CSS/autoload",
   fontDir: MathJax.OutputJax.directory + "/HTML-CSS/fonts", // font name added later
   webfontDir: MathJax.OutputJax.fontDir + "/HTML-CSS",      // font name added later
-
+  
   config: {
     noReflows: true,                // true uses internal measurements to avoid browser reflows
     matchFontHeight: true,          // try to match math font height to surrounding font?
@@ -41,7 +41,7 @@ MathJax.OutputJax["HTML-CSS"] = MathJax.OutputJax({
     availableFonts: ["STIX","TeX"], // list of local fonts to check for
     preferredFont: "TeX",           // preferred local font (TeX or STIX)
     webFont: "TeX",                 // web-based font to use when no local fonts found (TeX is only choice)
-    imageFont: "Tex",               // font to use for image fallback mode (TeX is only choice)
+    imageFont: "TeX",               // font to use for image fallback mode (TeX is only choice)
     undefinedFamily: "STIXGeneral,'Arial Unicode MS',serif", // fonts to use for unknown unicode characters
     mtextFontInherit: false,        // to make <mtext> be in page font rather than MathJax font
 
@@ -60,13 +60,13 @@ MathJax.OutputJax["HTML-CSS"] = MathJax.OutputJax({
                          // use "nn% container" for a portion of the container,
                          // use "nn%" for a portion of the window size
     },
-
+    
     styles: {
       ".MathJax_Display": {
         "text-align": "center",
         margin:       "1em 0em"
       },
-
+      
       ".MathJax .merror": {
         "background-color": "#FFFF88",
         color:   "#CC0000",
@@ -75,21 +75,21 @@ MathJax.OutputJax["HTML-CSS"] = MathJax.OutputJax({
         "font-style": "normal",
         "font-size":  "90%"
       },
-
+      
       //
       //  For mtextFontInherit version of \texttt{}
       //
       ".MathJax .MJX-monospace": {
         "font-family": "monospace"
       },
-
+      
       //
       //  For mtextFontInherit version of \textsf{}
       //
       ".MathJax .MJX-sans-serif": {
         "font-family": "sans-serif"
       },
-
+      
       "#MathJax_Tooltip": {
         "background-color": "InfoBackground", color: "InfoText",
         border: "1px solid black",
@@ -102,7 +102,7 @@ MathJax.OutputJax["HTML-CSS"] = MathJax.OutputJax({
         "z-index": 401
       }
     }
-
+    
   }
 });
 if (MathJax.Hub.Browser.isMSIE && document.documentMode >= 9)
@@ -125,7 +125,7 @@ MathJax.Hub.Register.StartupHook("End Config",[function (HUB,HTMLCSS) {
       Safari: 2.0,
       Konqueror: 4.0
     },
-
+    
     //
     //  For unsupported browsers, put back these delimiters for the preview
     //

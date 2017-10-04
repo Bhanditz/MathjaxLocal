@@ -1,4 +1,5 @@
 examples.mathjaxlocal = function() {
+  library(MathjaxLocal)
   library(shinyEvents)
   app = eventsApp()
   app$ui = fluidPage(
